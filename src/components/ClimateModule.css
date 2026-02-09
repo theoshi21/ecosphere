@@ -1,0 +1,127 @@
+.climate-module {
+  padding: var(--spacing-xl);
+  background-color: var(--color-bg-primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+/* Heat Risk specific styles */
+.heat-risk-card {
+  background-color: var(--color-bg-secondary);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+}
+
+.heat-risk-card h3 {
+  margin: 0 0 var(--spacing-lg) 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.heat-risk-value {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  display: inline-block;
+}
+
+.heat-risk-value.heat-risk-low {
+  background-color: var(--color-heat-low-bg);
+  color: var(--color-heat-low);
+}
+
+.heat-risk-value.heat-risk-moderate {
+  background-color: var(--color-heat-moderate-bg);
+  color: var(--color-heat-moderate);
+}
+
+.heat-risk-value.heat-risk-high {
+  background-color: var(--color-heat-high-bg);
+  color: var(--color-heat-high);
+}
+
+/* Climate-specific disclaimer styling */
+.climate-module .disclaimer-text {
+  background-color: var(--color-prototype-bg);
+  border-left: 4px solid var(--color-prototype-border);
+}
+
+/* Acoustic section styles */
+.acoustic-section {
+  margin-top: var(--spacing-2xl);
+  padding-top: var(--spacing-2xl);
+  border-top: 2px solid var(--color-primary);
+}
+
+.acoustic-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.acoustic-header h3 {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+}
+
+.acoustic-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
+}
+
+.acoustic-metric-card {
+  background-color: var(--color-bg-secondary);
+  padding: var(--spacing-xl);
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.acoustic-metric-card h4 {
+  margin: 0 0 var(--spacing-lg) 0;
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.acoustic-value {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.acoustic-classification {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  border-radius: var(--radius-md);
+  display: inline-block;
+}
+
+.acoustic-classification.acoustic-low {
+  background-color: var(--color-heat-low-bg);
+  color: var(--color-heat-low);
+}
+
+.acoustic-classification.acoustic-moderate {
+  background-color: var(--color-heat-moderate-bg);
+  color: var(--color-heat-moderate);
+}
+
+.acoustic-classification.acoustic-high {
+  background-color: var(--color-heat-high-bg);
+  color: var(--color-heat-high);
+}

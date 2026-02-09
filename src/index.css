@@ -1,0 +1,4 @@
+/* Import global theme */
+@import './theme.css';
+
+/* Application-specific overrides can go here if needed */

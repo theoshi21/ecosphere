@@ -1,0 +1,29 @@
+.carbon-estimator {
+  padding: var(--spacing-xl);
+  background-color: var(--color-bg-primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+/* Carbon-specific display styles */
+.carbon-display {
+  background-color: var(--color-bg-secondary);
+  padding: var(--spacing-2xl) var(--spacing-xl);
+  border-radius: var(--radius-md);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.carbon-value {
+  font-size: var(--font-size-5xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+.carbon-value .unit {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text-tertiary);
+  margin-left: var(--spacing-sm);
+}

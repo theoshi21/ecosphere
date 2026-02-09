@@ -1,0 +1,9 @@
+.waste-module {
+  padding: var(--spacing-xl);
+  background-color: var(--color-bg-primary);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+}
+
+/* Module-specific styles that override or extend theme */
+/* All common styles are now in theme.css */

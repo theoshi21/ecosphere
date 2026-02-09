@@ -1,0 +1,89 @@
+.navigation-header {
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0;
+  z-index: var(--z-index-sticky);
+}
+
+.navigation-container {
+  max-width: var(--max-width-content);
+  margin: 0 auto;
+  padding: var(--spacing-md) var(--spacing-xl);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-xl);
+}
+
+.app-branding {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.app-logo {
+  font-size: var(--font-size-3xl);
+  line-height: 1;
+}
+
+.app-title {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  margin: 0;
+  color: var(--color-text-white);
+}
+
+.navigation-links {
+  display: flex;
+  gap: var(--spacing-sm);
+  align-items: center;
+}
+
+.nav-link {
+  padding: var(--spacing-sm) var(--spacing-md);
+  color: var(--color-text-white);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: background-color var(--transition-base);
+  font-weight: var(--font-weight-medium);
+}
+
+.nav-link:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+}
+
+.nav-link:focus-visible {
+  outline: var(--focus-ring-width) solid var(--color-text-white);
+  outline-offset: var(--focus-ring-offset);
+}
+
+.nav-link.active {
+  background-color: rgba(255, 255, 255, 0.2);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .navigation-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+
+  .navigation-links {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .nav-link {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+
+  .app-title {
+    font-size: var(--font-size-xl);
+  }
+}
