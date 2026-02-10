@@ -76,13 +76,6 @@ export function ClimateModule({ data, acousticData }: ClimateModuleProps) {
       <div className="module-header">
         <h2>Climate Awareness</h2>
       </div>
-
-      <div className="disclaimer-text">
-        <p>
-          Climate indicators are for awareness and planning support, not prediction.
-        </p>
-      </div>
-
       <div className="heat-risk-card">
         <h3>Heat Risk Classification</h3>
         <div className={`heat-risk-value heat-risk-${heatRisk.toLowerCase()}`}>
@@ -120,11 +113,6 @@ export function ClimateModule({ data, acousticData }: ClimateModuleProps) {
         <div className="acoustic-section">
           <div className="acoustic-header">
             <h3>Acoustic Awareness</h3>
-          </div>
-          <div className="disclaimer-text">
-            <p>
-              Acoustic data is for awareness purposes only. No audio is captured or recorded.
-            </p>
           </div>
           <div className="acoustic-metrics">
             <div className="acoustic-metric-card">

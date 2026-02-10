@@ -24,15 +24,18 @@ export function PieChart({
   const formatter = tooltipFormatter || defaultTooltipFormatter;
 
   return (
-    <ResponsiveContainer width="100%" height={300}>
+    <ResponsiveContainer width="100%" height={350}>
       <RechartsPieChart>
         <Pie
           data={data}
           cx="50%"
-          cy="50%"
-          labelLine={false}
-          label={({ name, percent }) => `${name}: ${((percent ?? 0) * 100).toFixed(0)}%`}
-          outerRadius={80}
+          cy="45%"
+          labelLine={true}
+          label={({ name, percent }) => {
+            const percentage = ((percent ?? 0) * 100).toFixed(0);
+            return percentage !== '0' ? `${name}: ${percentage}%` : '';
+          }}
+          outerRadius={90}
           fill="#8884d8"
           dataKey="value"
         >
@@ -48,7 +51,11 @@ export function PieChart({
             borderRadius: '4px',
           }}
         />
-        <Legend />
+        <Legend 
+          verticalAlign="bottom" 
+          height={36}
+          wrapperStyle={{ paddingTop: '20px' }}
+        />
       </RechartsPieChart>
     </ResponsiveContainer>
   );

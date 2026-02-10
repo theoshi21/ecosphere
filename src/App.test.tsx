@@ -34,7 +34,7 @@ describe('App Integration Tests', () => {
       // Verify we're on Overview Dashboard
       await waitFor(() => {
         expect(screen.getAllByText('EcoSphere+ Campus Edition').length).toBeGreaterThan(0);
-        expect(screen.getByText('Prototype Dashboard – Demonstration Use Only')).toBeInTheDocument();
+        expect(screen.getByText('Total Energy')).toBeInTheDocument();
       });
 
       // Navigate to Energy Analysis
@@ -62,7 +62,7 @@ describe('App Integration Tests', () => {
       const overviewLink2 = screen.getByRole('link', { name: /overview/i });
       await user.click(overviewLink2);
       await waitFor(() => {
-        expect(screen.getByText('Prototype Dashboard – Demonstration Use Only')).toBeInTheDocument();
+        expect(screen.getByText('Total Energy')).toBeInTheDocument();
       });
     });
 
@@ -107,7 +107,6 @@ describe('App Integration Tests', () => {
 
       // Verify disclaimers are present (multiple components have these)
       expect(screen.getByText(/for awareness purposes only/i)).toBeInTheDocument();
-      expect(screen.getAllByText('Prototype / Demonstration Data').length).toBeGreaterThan(0);
     });
 
     it('completes climate awareness workflow', async () => {
@@ -127,7 +126,6 @@ describe('App Integration Tests', () => {
 
       // Verify disclaimers are present
       expect(screen.getByText(/climate indicators are for awareness/i)).toBeInTheDocument();
-      expect(screen.getAllByText('Prototype / Demonstration Data').length).toBeGreaterThan(0);
     });
   });
 
@@ -178,7 +176,7 @@ describe('App Integration Tests', () => {
       await user.click(overviewLink);
 
       await waitFor(() => {
-        expect(screen.getByText('Prototype Dashboard – Demonstration Use Only')).toBeInTheDocument();
+        expect(screen.getByText('Total Energy')).toBeInTheDocument();
       });
 
       // Verify summary cards are present
@@ -294,8 +292,7 @@ describe('App Integration Tests', () => {
       await user.click(overviewLink);
 
       await waitFor(() => {
-        // Main prototype banner
-        expect(screen.getByText('Prototype Dashboard – Demonstration Use Only')).toBeInTheDocument();
+        expect(screen.getByText('Total Energy')).toBeInTheDocument();
       });
 
       // Summary card disclaimers
@@ -311,7 +308,7 @@ describe('App Integration Tests', () => {
       await user.click(energyLink);
 
       await waitFor(() => {
-        expect(screen.getByText('Prototype / Demonstration Data')).toBeInTheDocument();
+        expect(screen.getByText('Energy Consumption')).toBeInTheDocument();
       });
     });
 
@@ -326,8 +323,6 @@ describe('App Integration Tests', () => {
         expect(screen.getByRole('heading', { name: /waste.*carbon/i, level: 1 })).toBeInTheDocument();
       });
       
-      // Multiple components have this label, so use getAllByText
-      expect(screen.getAllByText('Prototype / Demonstration Data').length).toBeGreaterThan(0);
       expect(screen.getByText(/for awareness purposes only/i)).toBeInTheDocument();
     });
 
@@ -339,7 +334,6 @@ describe('App Integration Tests', () => {
       await user.click(climateLink);
 
       await waitFor(() => {
-        expect(screen.getAllByText('Prototype / Demonstration Data').length).toBeGreaterThan(0);
         expect(screen.getByText(/climate indicators are for awareness/i)).toBeInTheDocument();
       });
     });
@@ -456,7 +450,7 @@ describe('App Integration Tests', () => {
       // Verify we're on the Overview Dashboard
       await waitFor(() => {
         expect(screen.getAllByText('EcoSphere+ Campus Edition').length).toBeGreaterThan(0);
-        expect(screen.getByText('Prototype Dashboard – Demonstration Use Only')).toBeInTheDocument();
+        expect(screen.getByText('Total Energy')).toBeInTheDocument();
       });
 
       // Verify all data types are represented

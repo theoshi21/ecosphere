@@ -35,17 +35,22 @@ export function LineChart({
     <ResponsiveContainer width="100%" height={300}>
       <RechartsLineChart
         data={data}
-        margin={{ top: 5, right: 30, left: 20, bottom: 5 }}
+        margin={{ top: 5, right: 30, left: 20, bottom: 20 }}
       >
         <CartesianGrid strokeDasharray="3 3" stroke="#e0e0e0" />
         <XAxis
           dataKey={xAxisKey}
-          label={xAxisLabel ? { value: xAxisLabel, position: 'insideBottom', offset: -5 } : undefined}
+          label={xAxisLabel ? { value: xAxisLabel, position: 'insideBottom', offset: -10 } : undefined}
           stroke="#757575"
+          tick={{ fontSize: 12 }}
+          angle={-45}
+          textAnchor="end"
+          height={60}
         />
         <YAxis
           label={yAxisLabel ? { value: yAxisLabel, angle: -90, position: 'insideLeft' } : undefined}
           stroke="#757575"
+          tick={{ fontSize: 12 }}
         />
         <Tooltip
           formatter={(value) => (typeof value === 'number' ? formatter(value) : value)}
@@ -55,7 +60,7 @@ export function LineChart({
             borderRadius: '4px',
           }}
         />
-        <Legend />
+        <Legend wrapperStyle={{ paddingTop: '10px' }} />
         <Line
           type="monotone"
           dataKey={yAxisKey}

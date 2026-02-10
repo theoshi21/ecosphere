@@ -16,11 +16,6 @@ describe('EnergyModule', () => {
     expect(screen.getByText('Energy Consumption')).toBeInTheDocument();
   });
 
-  it('displays the prototype label', () => {
-    render(<EnergyModule data={sampleData} />);
-    expect(screen.getByText('Prototype / Demonstration Data')).toBeInTheDocument();
-  });
-
   it('displays insight text', () => {
     render(<EnergyModule data={sampleData} />);
     const insightElement = screen.getByText(/increased by|decreased by|remained stable/i);

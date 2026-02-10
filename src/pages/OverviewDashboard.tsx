@@ -113,9 +113,17 @@ export function OverviewDashboard({
   // Format carbon footprint for display
   const formattedCarbon = useMemo(() => {
     if (summaryMetrics.carbonFootprint < 1000) {
-      return `${summaryMetrics.carbonFootprint.toFixed(1)} kg CO2e`;
+      return (
+        <>
+          {summaryMetrics.carbonFootprint.toFixed(1)} kg CO<sub>2</sub>e
+        </>
+      );
     } else {
-      return `${(summaryMetrics.carbonFootprint / 1000).toFixed(2)} tonnes CO2e`;
+      return (
+        <>
+          {(summaryMetrics.carbonFootprint / 1000).toFixed(2)} tonnes CO<sub>2</sub>e
+        </>
+      );
     }
   }, [summaryMetrics.carbonFootprint]);
 
@@ -132,7 +140,7 @@ export function OverviewDashboard({
             {summaryMetrics.totalEnergy.toFixed(0)}{' '}
             <span className="unit">kWh</span>
           </div>
-          <div className="summary-trend">
+          <div className={`summary-trend ${summaryMetrics.energyTrend > 0 ? 'trend-negative' : 'trend-positive'}`}>
             {summaryMetrics.energyTrend > 0 ? '↑' : '↓'}{' '}
             {Math.abs(summaryMetrics.energyTrend).toFixed(1)}%
           </div>

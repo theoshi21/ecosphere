@@ -62,6 +62,15 @@
   color: var(--color-text-tertiary);
   margin-top: var(--spacing-md);
   line-height: var(--line-height-relaxed);
+  font-weight: var(--font-weight-semibold);
+}
+
+.summary-trend.trend-positive {
+  color: var(--color-success);
+}
+
+.summary-trend.trend-negative {
+  color: var(--color-error);
 }
 
 .summary-detail {

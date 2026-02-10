@@ -22,12 +22,20 @@ export function CarbonEstimator({ data }: CarbonEstimatorProps) {
     if (carbonFootprint < 1000) {
       return {
         value: carbonFootprint.toFixed(1),
-        unit: 'kg CO2e',
+        unit: (
+          <>
+            kg CO<sub>2</sub>e
+          </>
+        ),
       };
     } else {
       return {
         value: (carbonFootprint / 1000).toFixed(2),
-        unit: 'tonnes CO2e',
+        unit: (
+          <>
+            tonnes CO<sub>2</sub>e
+          </>
+        ),
       };
     }
   }, [carbonFootprint]);
@@ -36,10 +44,6 @@ export function CarbonEstimator({ data }: CarbonEstimatorProps) {
     <div className="carbon-estimator">
       <div className="module-header">
         <h2>Carbon Footprint Estimate</h2>
-      </div>
-
-      <div className="disclaimer-text">
-        <p>Estimated carbon footprint (for awareness purposes only)</p>
       </div>
 
       <div className="carbon-display">
